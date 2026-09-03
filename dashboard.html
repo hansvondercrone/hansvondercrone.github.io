@@ -211,7 +211,7 @@ th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute
 .toolbarGroup{position:relative;display:inline-flex;align-items:center;gap:0;flex-wrap:nowrap;box-shadow:0 8px 18px rgba(0,59,113,.16);border-radius:999px}
 .toolbarLabel{font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:950;color:var(--muted);margin:0 10px 0 0;display:inline-flex;align-items:center;height:36px}
 .viewDropdownWrap{position:relative;display:inline-flex;align-items:center}
-.viewDropdownMain{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:0;border-radius:999px 0 0 999px;background:var(--blue);color:#fff;font-weight:950;height:36px;padding:0 15px;font-size:12px;cursor:pointer;min-width:136px}.viewDropdownMain::before{content:"";width:13px;height:13px;flex:0 0 auto;background-color:#fff;-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 6h22M1 12h22M1 18h22'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 6h22M1 12h22M1 18h22'/%3E%3C/svg%3E");-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.viewDropdownMain{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:0;border-radius:999px 0 0 999px;background:var(--blue);color:#fff;font-weight:950;height:36px;padding:0 15px;font-size:12px;cursor:pointer;width:196px;min-width:196px;white-space:nowrap;line-height:1}.viewDropdownMain::before{content:"";width:13px;height:13px;flex:0 0 auto;background-color:#fff;-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 6h22M1 12h22M1 18h22'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 6h22M1 12h22M1 18h22'/%3E%3C/svg%3E");-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
 .viewDropdownMain:hover{background:#14558f}
 .viewDropdownBtn{width:38px;height:36px;border-radius:0 999px 999px 0;border:0;border-left:1px solid rgba(255,255,255,.24);background:#0d4b84;color:#fff;box-shadow:0 8px 18px rgba(0,59,113,.16);font-size:15px;font-weight:950;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
 .viewDropdownBtn:hover{background:#14558f}
@@ -224,17 +224,65 @@ th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute
 .viewHistoryCheck{display:flex;align-items:center;gap:9px;margin-top:6px;padding:9px 10px;border-top:1px solid #edf2f7;border-radius:10px;color:#233b5e;font-size:13px;font-weight:900;cursor:pointer;user-select:none}
 .viewHistoryCheck:hover{background:#f5f9fd;color:var(--ink)}
 .viewHistoryCheck input{width:15px;height:15px;accent-color:var(--blue)}
-.previousYearsControl{height:36px;padding:0 13px;border:1px solid #c6d8ea;border-radius:999px;background:#fff;color:#41556d;display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:950;white-space:nowrap;cursor:pointer;user-select:none;transition:background .15s ease,color .15s ease,box-shadow .15s ease,border-color .15s ease}
+.previousYearsControl{width:164px;height:36px;padding:0 13px;border:1px solid #c6d8ea;border-radius:999px;background:#fff;color:#41556d;display:inline-flex;align-items:center;justify-content:center;gap:7px;font-size:12px;font-weight:950;white-space:nowrap;line-height:1;cursor:pointer;user-select:none;transition:background .15s ease,color .15s ease,box-shadow .15s ease,border-color .15s ease}
 .previousYearsControl:hover{background:#edf5fc;color:var(--ink);border-color:#a9cbea;box-shadow:0 6px 14px rgba(15,23,42,.07)}
 .previousYearsControl:has(input:checked){background:#edf5fc;color:var(--blue);border-color:#8bb9df;box-shadow:0 7px 16px rgba(0,59,113,.11)}
 .previousYearsControl input{width:15px;height:15px;margin:0;accent-color:var(--blue);flex:0 0 auto}
-.drillBtn{border:1px solid #c6d8ea;background:#fff;color:#41556d;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:950;cursor:pointer;transition:background .15s ease,color .15s ease,box-shadow .15s ease,border-color .15s ease}
+.drillBtn{width:190px;height:36px;border:1px solid #c6d8ea;background:#fff;color:#41556d;border-radius:999px;padding:0 12px;font-size:13px;font-weight:950;white-space:nowrap;line-height:1;justify-content:center;cursor:pointer;transition:background .15s ease,color .15s ease,box-shadow .15s ease,border-color .15s ease}
 .drillBtn:hover{background:#f8fbff;color:var(--ink);box-shadow:0 6px 14px rgba(15,23,42,.07)}
 .drillBtn.active{background:var(--blue);color:#fff;border-color:var(--blue);box-shadow:0 8px 18px rgba(0,59,113,.18)}
 .drillBtn{padding-inline:14px;background:#fff9f3;border-color:#f7d1ad;color:#a84f0b;display:inline-flex;align-items:center;gap:6px}.drillBtn::before{content:"";width:13px;height:13px;flex:0 0 auto;background-color:currentColor;-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6h16M4 12h8m-8 6h16'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6h16M4 12h8m-8 6h16'/%3E%3C/svg%3E");-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
 .drillBtn.active{background:var(--orange);border-color:var(--orange);color:#fff;box-shadow:0 8px 18px rgba(245,130,32,.18)}
 .sectionToolbarSlot{display:flex;align-items:center;justify-content:flex-end;min-width:0}
 .sectionToolbarSlot:empty{display:none}
+/* Vaste bedieningsrij onder de sectietitel: categorie en historiek links,
+   de beperkte/volledige weergave steeds rechts. */
+.dashboardToolbar.contextualToolbar{
+  display:grid;
+  grid-template-columns:max-content 164px minmax(0,1fr) 190px;
+  align-items:center;
+  gap:10px;
+  width:100%;
+  max-width:100%;
+}
+.dashboardToolbar.contextualToolbar .viewDropdownWrap{
+  grid-column:1;
+  grid-row:1;
+  display:grid;
+  grid-template-columns:max-content;
+  align-items:center;
+  visibility:visible;
+}
+.dashboardToolbar.contextualToolbar .viewDropdownWrap .toolbarLabel{display:none}
+.dashboardToolbar.contextualToolbar .viewModeSegmented{justify-self:start;max-width:100%}
+.dashboardToolbar.contextualToolbar .kpiSelectorWrap{
+  grid-column:1;
+  grid-row:1;
+  padding-left:0;
+}
+.dashboardToolbar.contextualToolbar.kpiToolbar{grid-template-columns:max-content 164px minmax(0,1fr) 190px}
+.dashboardToolbar.contextualToolbar .previousYearsControl{grid-column:2;grid-row:1;justify-self:start}
+.dashboardToolbar.contextualToolbar .drillBtn{grid-column:4;grid-row:1;justify-self:end}
+.dashboardToolbar.contextualToolbar.hideViewDropdown .viewDropdownWrap,
+.dashboardToolbar.contextualToolbar.kpiToolbar .viewDropdownWrap{display:none}
+.dashboardToolbar.contextualToolbar.hidePreviousYears .previousYearsControl{display:none}
+.dashboardToolbar.contextualToolbar.hideDrillButton .drillBtn,
+.dashboardToolbar.contextualToolbar.kpiToolbar .drillBtn{display:none}
+.dashboardToolbar.contextualToolbar.kpiToolbar .kpiSelectorWrap{display:inline-flex;visibility:visible;order:initial}
+.dashboardToolbar.contextualToolbar.hideViewDropdown.hidePreviousYears.hideDrillButton{display:grid;visibility:hidden;pointer-events:none;min-height:43px}
+@media(max-width:760px){
+  .dashboardToolbar.contextualToolbar{display:flex;width:100%;max-width:100%;justify-content:flex-start;flex-wrap:wrap}
+  .dashboardToolbar.contextualToolbar .viewDropdownWrap{display:inline-flex;visibility:visible;max-width:100%}
+  .dashboardToolbar.contextualToolbar .viewDropdownWrap .toolbarLabel{display:none}
+  .dashboardToolbar.contextualToolbar .kpiSelectorWrap{padding-left:0}
+  .dashboardToolbar.contextualToolbar .drillBtn{margin-left:auto}
+  .dashboardToolbar.contextualToolbar.hideViewDropdown .viewDropdownWrap,
+  .dashboardToolbar.contextualToolbar.kpiToolbar .viewDropdownWrap,
+  .dashboardToolbar.contextualToolbar.hidePreviousYears .previousYearsControl,
+  .dashboardToolbar.contextualToolbar.hideDrillButton .drillBtn,
+  .dashboardToolbar.contextualToolbar.kpiToolbar .drillBtn{display:none}
+  .dashboardToolbar.contextualToolbar.hideViewDropdown.hidePreviousYears.hideDrillButton{display:flex;visibility:hidden;pointer-events:none;min-height:43px}
+}
 #dashboard.view-main-only .barrow:has(.catSubText){display:none!important}
 #dashboard.view-sub-only .barrow:has(.catMainText.hasSubs){display:none!important}
 #dashboard.view-main-only .vervalRatioSection.subRatioSection{display:none!important}
@@ -825,6 +873,27 @@ th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute
 .titleExportRow .sectionToolbarSlot{margin-left:auto}
 .titleExportRow .blockExportActions{margin:0 0 0 auto;flex:0 0 auto}
 .titleExportRow .sectionToolbarSlot + .blockExportActions{margin-left:0}
+.section.active>.card>.titleExportRow{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  align-items:center;
+  row-gap:0;
+  padding-right:0;
+}
+.section.active>.card>.titleExportRow>.sectionTitleWrap{grid-column:1;grid-row:1;justify-self:start;width:100%;padding-right:88px;box-sizing:border-box}
+.section.active>.card>.titleExportRow>.sectionToolbarSlot{
+  grid-column:1;
+  grid-row:2;
+  width:100%;
+  min-height:43px;
+  margin:12px 0 0;
+}
+.section.active>.card>.titleExportRow>.view360GlobalToggle{
+  grid-column:1;
+  grid-row:2;
+  justify-self:start;
+  margin:12px 0 0;
+}
 .section.forceExportOpen .cat .p-18{display:block!important}
 .section.forceExportOpen .cat .blockExportActions{display:none!important}
 #dashboard.drillMode .section.forceExportOpen .cat:not(.totalNonLife) .catHead.exportableBlockHeader::after,
@@ -1005,6 +1074,7 @@ th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute
 .view360AnalysisToggle{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:#edf5fc;border:1px solid #cbdff2;flex:0 0 auto}
 .view360AnalysisToggle button{border:0;border-radius:999px;background:transparent;color:#405775;font-size:12px;font-weight:950;padding:8px 11px;cursor:pointer;white-space:nowrap}
 .view360AnalysisToggle button.active{background:var(--blue);color:#fff;box-shadow:0 6px 14px rgba(0,59,113,.18)}
+.view360GlobalToggle{margin-left:auto}
 .view360AnalysisGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:stretch;border:0;border-radius:0;background:transparent;overflow:visible;padding:12px}
 .view360AnalysisMetric{position:relative;background:#fff;padding:18px 14px 14px;min-width:0;border:1px solid #d5e5f4;border-radius:22px;box-shadow:0 10px 22px rgba(0,59,113,.08);overflow:hidden}
 .view360AnalysisMetric:first-child{border-left:1px solid #d5e5f4}
@@ -1506,14 +1576,10 @@ body.topInfoReady .topCompactActions #topInfoToggleBtn{order:9}
       <div class="dashboardToolbar" id="dashboardToolbar">
         <div class="viewDropdownWrap" id="viewDropdownWrap">
           <span class="toolbarLabel" id="viewModeLabel">Weergave</span>
-          <div class="toolbarGroup" id="viewModeControls">
-              <button type="button" class="viewDropdownMain" id="viewDropdownMain">Hoofd- en subcategorieën</button>
-              <button type="button" class="viewDropdownBtn" id="viewDropdownBtn" title="Weergave kiezen" aria-label="Weergave kiezen" aria-expanded="false"><svg style="width:13px;height:13px;display:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-              <div class="viewDropdownMenu" id="viewDropdownMenu" role="menu" aria-label="Weergave">
-                <button type="button" class="viewBtn active" data-view="all" id="viewAllBtn">Hoofd- en subcategorieën</button>
-                <button type="button" class="viewBtn" data-view="main" id="viewMainBtn">Hoofdcategorieën</button>
-                <button type="button" class="viewBtn" data-view="sub" id="viewSubBtn">Subcategorieën</button>
-              </div>
+          <div class="view360AnalysisToggle viewModeSegmented" id="viewModeControls" role="group" aria-label="Weergave">
+              <button type="button" data-view="main" id="viewMainBtn">Hoofdcategorieën</button>
+              <button type="button" data-view="sub" id="viewSubBtn">Subcategorieën</button>
+              <button type="button" class="active" data-view="all" id="viewAllBtn">Hoofd- en subcategorieën</button>
           </div>
         </div>
         <label class="previousYearsControl" id="previousYearsControl"><input type="checkbox" id="previousYearsToggle"><span id="previousYearsToggleLabel">Vorige jaren</span></label>
@@ -1531,7 +1597,7 @@ body.topInfoReady .topCompactActions #topInfoToggleBtn{order:9}
             </div>
           </div>
         </div>
-        <button type="button" class="drillBtn" id="drillToggleBtn">Beperkte weergave</button>
+        <button type="button" class="drillBtn" id="drillToggleBtn">Alles uitklappen</button>
       </div>
     </div>
     <div class="tabs">
@@ -1542,8 +1608,8 @@ body.topInfoReady .topCompactActions #topInfoToggleBtn{order:9}
       <button class="tab" data-tab="schade" id="tabSchade">Schade</button>
       <button class="tab" data-tab="portefeuille" id="tabPortefeuille">Portefeuille</button>
       <button class="tab" data-tab="detail" id="tabDetail">Detail per categorie</button>
-      <button class="tab" data-tab="kpiOverzicht" id="tabKpis">KPI's</button>
       <button class="tab" data-tab="view360" id="tab360">360-view</button>
+      <button class="tab" data-tab="kpiOverzicht" id="tabKpis">KPI's</button>
     </div>
 
     <section id="samenvatting" class="section active">
@@ -1556,7 +1622,7 @@ body.topInfoReady .topCompactActions #topInfoToggleBtn{order:9}
 
     <section id="view360" class="section">
       <div class="card full">
-        <div class="titleExportRow"><div class="sectionTitleWrap"><h2 id="view360Title">360-view</h2><span class="sectionBrokerInline" id="view360BrokerInline"></span><span class="sectionPeriodInline" id="view360PeriodInline"></span></div><div class="sectionToolbarSlot"></div><div class="blockExportActions" data-export-target="view360All" aria-label="360-view exporteren"><button type="button" class="blockExportBtn blockExportDownload" title="Download 360-view als PNG"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button><button type="button" class="blockExportBtn blockExportCopy" title="Kopieer 360-view als afbeelding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span style="font-size:11px;font-weight:950;padding-left:4px">Kopieer</span></button></div></div>
+        <div class="titleExportRow"><div class="sectionTitleWrap"><h2 id="view360Title">360-view</h2><span class="sectionBrokerInline" id="view360BrokerInline"></span><span class="sectionPeriodInline" id="view360PeriodInline"></span></div><div class="sectionToolbarSlot"></div><div class="view360AnalysisToggle view360GlobalToggle" role="group" aria-label="Analyseweergave"><button type="button" class="active" data-view360-analysis="main" id="view360MainBtn">Hoofdcategorieën</button><button type="button" data-view360-analysis="sub" id="view360SubBtn">Subcategorieën</button><button type="button" data-view360-analysis="all" id="view360AllBtn">Hoofd- en subcategorieën</button></div><div class="blockExportActions" data-export-target="view360All" aria-label="360-view exporteren"><button type="button" class="blockExportBtn blockExportDownload" title="Download 360-view als PNG"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button><button type="button" class="blockExportBtn blockExportCopy" title="Kopieer 360-view als afbeelding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span style="font-size:11px;font-weight:950;padding-left:4px">Kopieer</span></button></div></div>
         <div id="view360Content" class="view360Stack"></div>
       </div>
     </section>
@@ -1774,7 +1840,7 @@ let dashboardCurrentPeriod = null;
 let dashboardPreviousPeriod = null;
 let viewMode = 'all';
 let previousYearsMode = false;
-let view360AnalysisModes = { kmo: 'main', particulieren: 'main', auto: 'main' };
+let view360AnalysisMode = 'main';
 let drillMode = true;
 let productionPieState = { segments: [], total: 0 };
 let topInfoCollapsed = false;
@@ -1805,7 +1871,7 @@ const I18N = {
     pageLead: 'Upload je <strong>kerncijfers non-life PDF (NL of FR)</strong>. De pagina converteert de PDF automatisch naar CSV, het dashboard maakt een samenvatting per onderdeel (productie, verval, ...).',
     uploadTitle: 'Klik of sleep de PDF hierheen', uploadHint: 'NL of FR', importPdf: 'Importeer', downloadCsv: 'Download CSV', exportPdf: 'Exporteer PDF', pdfBusy: 'PDF wordt gemaakt…', pdfOptionsTitle: 'PDF secties', pdfNoSections: 'Selecteer minstens één PDF-sectie.', noPdf: 'Nog geen PDF geladen.', processing: '⏳ PDF verwerken…',
     success: n => '✅ PDF geladen & verwerkt: ' + n + ' datarijen. Percentages en schade-totalen komen rechtstreeks uit de PDF.', error: '❌ Fout bij verwerken PDF: ',
-    broker: 'Makelaar', koepelnummer: 'koepelnummer', groepsnummer: 'groepsnummer', vs: 'vs', main: 'Hoofd', sub: 'Sub', lowerPositive: 'daling is positief', lowerBetter: 'schade: lager is beter', viewModeLabel: 'Weergave', viewAll: 'Hoofd- en subcategorieën', viewMainOnly: 'Hoofdcategorieën', viewSubOnly: 'Subcategorieën', previousYears: 'Vorige jaren', drillDown: 'Beperkte weergave', drillDownActive: 'Alles tonen', importControlTitle: 'Importcontrole', importControlSub: 'Snelle controle of de PDF correct werd geïnterpreteerd', importPeriods: 'Aantal periodes gevonden', importLatestPeriod: 'Laatste periode gevonden', importTotalProd: 'TOTAAL NON LIFE productie', importTotalSchade: 'TOTAAL NON LIFE schade', importSpPct: 'S/P % correct gelezen', importBroker: 'Makelaar/koepelnummer', yes: 'Ja', no: 'Nee', topCompactTitle: 'PDF import & controle', topShow: 'Toon importinformatie', topHide: 'Verberg importinformatie', topOk: 'Importcontrole OK', topAttention: n => n + ' aandachtspunt' + (n === 1 ? '' : 'en'), topPeriodsShort: 'periodes', topLatestShort: 'laatste',
+    broker: 'Makelaar', koepelnummer: 'koepelnummer', groepsnummer: 'groepsnummer', vs: 'vs', main: 'Hoofd', sub: 'Sub', lowerPositive: 'daling is positief', lowerBetter: 'schade: lager is beter', viewModeLabel: 'Weergave', viewAll: 'Hoofd- en subcategorieën', viewMainOnly: 'Hoofdcategorieën', viewSubOnly: 'Subcategorieën', previousYears: 'Vorige jaren', drillDown: 'Alles inklappen', drillDownActive: 'Alles uitklappen', importControlTitle: 'Importcontrole', importControlSub: 'Snelle controle of de PDF correct werd geïnterpreteerd', importPeriods: 'Aantal periodes gevonden', importLatestPeriod: 'Laatste periode gevonden', importTotalProd: 'TOTAAL NON LIFE productie', importTotalSchade: 'TOTAAL NON LIFE schade', importSpPct: 'S/P % correct gelezen', importBroker: 'Makelaar/koepelnummer', yes: 'Ja', no: 'Nee', topCompactTitle: 'PDF import & controle', topShow: 'Toon importinformatie', topHide: 'Verberg importinformatie', topOk: 'Importcontrole OK', topAttention: n => n + ' aandachtspunt' + (n === 1 ? '' : 'en'), topPeriodsShort: 'periodes', topLatestShort: 'laatste',
     tabSamenvatting: 'Samenvatting', tab360: '360-view', tabProductie: 'Productie', tabVerval: 'Verval', tabProgressie: 'Progressie', tabSchade: 'Schade', tabPortefeuille: 'Portefeuille', tabKpis: "KPI's", tabDetail: 'Detail per categorie', kpiSelectorLabel: "KPI's", kpiSelectorAll: "Alle KPI's", kpiSelectorCount: n => n + " KPI-sectie" + (n === 1 ? '' : 's'), kpiOverviewEmpty: 'Selecteer minstens één KPI-sectie.',
     prodTitle: 'Productie', vervalTitle: 'Verval', progTitle: 'Progressie', schadeTitle: 'Schade', portefeuilleTitle: 'Portefeuille: verdiende premie', detailTitle: 'Hoofd- en subcategorieën',
     prodNote: 'De gegevens hieronder tonen per hoofdcategorie eerst de hoofdrij en daaronder alle subcategorieën uit de CSV.', portefeuilleNote: 'De grafieken hieronder tonen de verdiende premie op TOTAAL NON LIFE-niveau: eerst de drie meest recente volledige jaren, daarnaast de laatste periode vorig jaar tegenover de laatste periode dit jaar.', portefeuilleSub: (a,b) => 'Verdiende premie TOTAAL NON LIFE. Volledige jaren apart; laatste periode: ' + a + ' versus ' + b + '.', portefeuilleYears: 'Voorbije 3 jaar', portefeuilleComparison: 'Laatste periode J vs J-1', portefeuilleEmpty: 'Geen portefeuillegegevens gevonden.', vorigJaar: 'Vorig jaar', huidigJaar: 'Dit jaar', vervalNote: 'De gegevens hieronder tonen per hoofdcategorie eerst de hoofdrij en daaronder alle subcategorieën uit de CSV, inclusief verval door klant en maatschappij.', progNote: 'Progressie wordt getoond als productie - verval + transformatie, per hoofdcategorie en subcategorie zoals aangeleverd in de CSV.', schadeNote: 'Interpretatie schade: een daling van schadegevallen, schadelast of S/P is positief en wordt groen weergegeven, een stijging is negatief.',
@@ -1819,7 +1885,7 @@ const I18N = {
     pageLead: 'Téléchargez votre <strong>PDF mensuel (NL ou FR)</strong>. La page convertit automatiquement le PDF en CSV, lit les catégories principales et sous-catégories et compare les deux périodes mensuelles les plus récentes. Pour les sinistres, une baisse est interprétée comme positive.',
     uploadTitle: 'Cliquez ou glissez le PDF ici', uploadHint: 'NL ou FR', importPdf: 'Importer', downloadCsv: 'Télécharger CSV', exportPdf: 'Exporter PDF', pdfBusy: 'Création du PDF…', pdfOptionsTitle: 'Sections PDF', pdfNoSections: 'Sélectionnez au moins une section PDF.', noPdf: 'Aucun PDF chargé.', processing: '⏳ Traitement du PDF…',
     success: n => '✅ PDF chargé & traité : ' + n + ' lignes de données. Les pourcentages et totaux sinistres proviennent directement du PDF.', error: '❌ Erreur lors du traitement du PDF : ',
-    broker: 'Courtier', koepelnummer: 'n° coupole', groepsnummer: 'n° groupe', vs: 'vs', main: 'Principal', sub: 'Sous-cat.', lowerPositive: 'baisse positive', lowerBetter: 'sinistres : plus bas est meilleur', viewModeLabel: 'Affichage', viewAll: 'Tout', viewMainOnly: 'Catégories principales', viewSubOnly: 'Sous-catégories', previousYears: 'Années précédentes', drillDown: 'Affichage limité', drillDownActive: 'Tout afficher', importControlTitle: 'Contrôle import', importControlSub: 'Contrôle rapide de l’interprétation du PDF', importPeriods: 'Nombre de périodes', importLatestPeriod: 'Dernière période trouvée', importTotalProd: 'TOTAL NON VIE production', importTotalSchade: 'TOTAL NON VIE sinistres', importSpPct: 'S/P % lu correctement', importBroker: 'Courtier/n° coupole', yes: 'Oui', no: 'Non', topCompactTitle: 'Import PDF & contrôle', topShow: 'Afficher les informations import', topHide: 'Masquer les informations import', topOk: 'Contrôle import OK', topAttention: n => n + ' point' + (n === 1 ? '' : 's') + ' d’attention', topPeriodsShort: 'périodes', topLatestShort: 'dernière',
+    broker: 'Courtier', koepelnummer: 'n° coupole', groepsnummer: 'n° groupe', vs: 'vs', main: 'Principal', sub: 'Sous-cat.', lowerPositive: 'baisse positive', lowerBetter: 'sinistres : plus bas est meilleur', viewModeLabel: 'Affichage', viewAll: 'Tout', viewMainOnly: 'Catégories principales', viewSubOnly: 'Sous-catégories', previousYears: 'Années précédentes', drillDown: 'Tout replier', drillDownActive: 'Tout déplier', importControlTitle: 'Contrôle import', importControlSub: 'Contrôle rapide de l’interprétation du PDF', importPeriods: 'Nombre de périodes', importLatestPeriod: 'Dernière période trouvée', importTotalProd: 'TOTAL NON VIE production', importTotalSchade: 'TOTAL NON VIE sinistres', importSpPct: 'S/P % lu correctement', importBroker: 'Courtier/n° coupole', yes: 'Oui', no: 'Non', topCompactTitle: 'Import PDF & contrôle', topShow: 'Afficher les informations import', topHide: 'Masquer les informations import', topOk: 'Contrôle import OK', topAttention: n => n + ' point' + (n === 1 ? '' : 's') + ' d’attention', topPeriodsShort: 'périodes', topLatestShort: 'dernière',
     tabSamenvatting: 'Résumé', tab360: 'Vue 360', tabProductie: 'Production', tabVerval: 'Chute', tabProgressie: 'Progression', tabSchade: 'Sinistres', tabPortefeuille: 'Portefeuille', tabKpis: 'KPI', tabDetail: 'Détail par catégorie', kpiSelectorLabel: 'KPI', kpiSelectorAll: 'Tous les KPI', kpiSelectorCount: n => n + ' section' + (n === 1 ? '' : 's') + ' KPI', kpiOverviewEmpty: 'Sélectionnez au moins une section KPI.',
     prodTitle: 'Production', vervalTitle: 'Chute', progTitle: 'Progression', schadeTitle: 'Sinistres', portefeuilleTitle: 'Portefeuille : prime acquise', detailTitle: 'Catégories principales et sous-catégories',
     prodNote: 'Les données ci-dessous affichent d’abord la ligne principale par catégorie, puis toutes les sous-catégories du CSV.', portefeuilleNote: 'Les graphiques ci-dessous affichent la prime acquise au niveau TOTAL NON VIE : d’abord les trois dernières années complètes, puis la dernière période de l’année passée face à la dernière période de cette année.', portefeuilleSub: (a,b) => 'Prime acquise TOTAL NON VIE. Années complètes séparées ; dernière période : ' + a + ' versus ' + b + '.', portefeuilleYears: '3 dernières années', portefeuilleComparison: 'Dernière période A vs A-1', portefeuilleEmpty: 'Aucune donnée portefeuille trouvée.', vorigJaar: 'Année passée', huidigJaar: 'Cette année', vervalNote: 'Les données ci-dessous affichent d’abord la ligne principale par catégorie, puis toutes les sous-catégories du CSV, y compris la chute client et compagnie.', progNote: 'La progression est affichée comme production - chute + transformation, par catégorie principale et sous-catégorie telle que fournie dans le CSV.', schadeNote: 'Interprétation sinistres : une baisse du nombre de sinistres, de la charge sinistre ou du S/P est positive et s’affiche en vert. Une hausse est négative. Les données ci-dessous affichent d’abord la ligne principale par catégorie, puis toutes les sous-catégories du CSV.',
@@ -1854,7 +1920,7 @@ function updateStaticLanguage() {
   setText('tabSamenvatting', msg('tabSamenvatting')); setText('tab360', msg('tab360')); setText('tabProductie', msg('tabProductie')); setText('tabVerval', msg('tabVerval')); setText('tabProgressie', msg('tabProgressie')); setText('tabSchade', msg('tabSchade')); setText('tabPortefeuille', msg('tabPortefeuille')); setText('tabKpis', msg('tabKpis')); setText('tabDetail', msg('tabDetail'));
   setText('kpiCheckSamenvatting', msg('tabSamenvatting')); setText('kpiCheckProductie', msg('tabProductie')); setText('kpiCheckVerval', msg('tabVerval')); setText('kpiCheckProgressie', msg('tabProgressie')); setText('kpiCheckSchade', msg('tabSchade')); setText('kpiCheckPortefeuille', msg('tabPortefeuille')); updateKpiSelectorLabel();
   setText('viewModeLabel', msg('viewModeLabel')); setText('viewAllBtn', msg('viewAll')); setText('viewMainBtn', msg('viewMainOnly')); setText('viewSubBtn', msg('viewSubOnly')); setText('previousYearsToggleLabel', msg('previousYears')); setText('drillToggleBtn', drillMode ? msg('drillDownActive') : msg('drillDown')); updateViewDropdownLabel(); setText('topCompactTitle', msg('topCompactTitle')); if (lastData && dashboardCurrentPeriod) { renderImportControl(lastData, dashboardCurrentPeriod); renderTopCompactBar(); updateTopInfoToggleButton(); }
-  setText('summaryTitle', msg('tabSamenvatting')); setText('view360Title', msg('tab360')); setText('prodTitle', msg('prodTitle')); setText('vervalTitle', msg('vervalTitle')); setText('progTitle', msg('progTitle')); setText('schadeTitle', msg('schadeTitle')); setText('portefeuilleTitle', msg('portefeuilleTitle')); setText('kpiOverviewTitle', msg('tabKpis')); setText('detailTitle', msg('detailTitle')); setText('productionPieTitle', msg('productionPieTitle'));
+  setText('summaryTitle', msg('tabSamenvatting')); setText('view360Title', msg('tab360')); setText('view360MainBtn', msg('viewMainOnly')); setText('view360SubBtn', msg('viewSubOnly')); setText('view360AllBtn', msg('viewAll')); setText('prodTitle', msg('prodTitle')); setText('vervalTitle', msg('vervalTitle')); setText('progTitle', msg('progTitle')); setText('schadeTitle', msg('schadeTitle')); setText('portefeuilleTitle', msg('portefeuilleTitle')); setText('kpiOverviewTitle', msg('tabKpis')); setText('detailTitle', msg('detailTitle')); setText('productionPieTitle', msg('productionPieTitle'));
   updateSectionPeriodInline(dashboardPreviousPeriod, dashboardCurrentPeriod);
   setText('prodNote', msg('prodNote')); setText('vervalNote', msg('vervalNote')); setText('progNote', msg('progNote')); setText('schadeNote', msg('schadeNote')); setText('portefeuilleNote', msg('portefeuilleNote'));
   document.querySelectorAll('.exportCopyText, .blockExportCopy span').forEach(el => { el.textContent = exportCopyLabel(); });
@@ -1886,13 +1952,38 @@ function hasManualClosedCategories() {
   return !!document.querySelector('.cat.manualClosed,.portfolioCategoryBlock.manualClosed');
 }
 
+function categoryExpansionBlocks(section) {
+  return Array.from(section?.querySelectorAll('.cat:not(.totalNonLife),.portfolioCategoryBlock:not(.portfolioTotalBlock)') || []);
+}
+function categoryExpansionKey(block, index) {
+  const title = block.querySelector('.catTitle')?.textContent?.trim() || '';
+  return `${index}:${title}`;
+}
+function captureCategoryExpansionState(section) {
+  return categoryExpansionBlocks(section).map((block, index) => ({
+    key: categoryExpansionKey(block, index),
+    drillOpen: block.classList.contains('drillOpen'),
+    manualClosed: block.classList.contains('manualClosed')
+  }));
+}
+function restoreCategoryExpansionState(section, savedState) {
+  if (!savedState?.length) return;
+  const byKey = new Map(savedState.map(state => [state.key, state]));
+  categoryExpansionBlocks(section).forEach((block, index) => {
+    const state = byKey.get(categoryExpansionKey(block, index));
+    if (!state) return;
+    block.classList.toggle('drillOpen', state.drillOpen);
+    block.classList.toggle('manualClosed', state.manualClosed);
+  });
+}
+
 function applyDashboardDisplayModes() {
   const dash = $('dashboard');
   if (!dash) return;
   dash.classList.toggle('view-main-only', viewMode === 'main');
   dash.classList.toggle('view-sub-only', viewMode === 'sub');
   dash.classList.toggle('drillMode', !!drillMode);
-  document.querySelectorAll('.viewBtn').forEach(btn => btn.classList.toggle('active', btn.dataset.view === viewMode));
+  document.querySelectorAll('[data-view]').forEach(btn => btn.classList.toggle('active', btn.dataset.view === viewMode));
   const previousYearsToggle = $('previousYearsToggle');
   if (previousYearsToggle) previousYearsToggle.checked = !!previousYearsMode;
   updateViewDropdownLabel();
@@ -1922,7 +2013,9 @@ function setPreviousYearsMode(on) {
     markDashboardSectionsDirty('productie', 'verval', 'progressie', 'schade', 'kpiOverzicht');
     const active = activeTabId();
     if (['productie', 'verval', 'progressie', 'schade', 'kpiOverzicht'].includes(active)) {
+      const expansionState = captureCategoryExpansionState($(active));
       renderDashboardSection(active);
+      restoreCategoryExpansionState($(active), expansionState);
       formatDisplayedPeriods($(active));
       triggerMotionRefresh($(active));
     }
@@ -2119,7 +2212,7 @@ document.addEventListener('DOMContentLoaded', () => {
   $('viewDropdownMain')?.addEventListener('click', toggleViewDropdown);
   $('viewDropdownBtn')?.addEventListener('click', toggleViewDropdown);
   $('viewDropdownMenu')?.addEventListener('click', e => e.stopPropagation());
-  document.querySelectorAll('.viewBtn').forEach(btn => btn.addEventListener('click', () => {
+  document.querySelectorAll('[data-view]').forEach(btn => btn.addEventListener('click', () => {
     setViewMode(btn.dataset.view);
     $('viewDropdownWrap')?.classList.remove('open');
     $('viewDropdownBtn')?.setAttribute('aria-expanded', 'false');
@@ -2162,9 +2255,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (analysisBtn) {
       e.preventDefault();
       const scrollY = window.scrollY;
-      const blockId = analysisBtn.dataset.view360AnalysisId || 'kmo';
       const requestedMode = analysisBtn.dataset.view360Analysis;
-      view360AnalysisModes[blockId] = ['main', 'sub', 'all'].includes(requestedMode) ? requestedMode : 'main';
+      view360AnalysisMode = ['main', 'sub', 'all'].includes(requestedMode) ? requestedMode : 'main';
+      document.querySelectorAll('[data-view360-analysis]').forEach(btn => btn.classList.toggle('active', btn.dataset.view360Analysis === view360AnalysisMode));
       render360View();
       requestAnimationFrame(() => window.scrollTo({ top: scrollY, left: 0, behavior: 'auto' }));
       return;
@@ -3067,7 +3160,9 @@ function moveDashboardToolbarToActiveSection() {
   const toolbar = $('dashboardToolbar');
   if (!toolbar) return;
   const activeSection = document.querySelector('#dashboard .section.active');
-  const targetSlot = activeSection?.querySelector(':scope > .card .titleExportRow > .sectionToolbarSlot');
+  const targetSlot = activeSection?.id === 'view360'
+    ? null
+    : activeSection?.querySelector(':scope > .card .titleExportRow > .sectionToolbarSlot');
   const fallback = $('dashboardToolbarHome');
   const target = targetSlot || fallback;
   if (target && toolbar.parentElement !== target) target.appendChild(toolbar);
@@ -4841,30 +4936,18 @@ function view360KmoCategoryHtml(data, row, prevP, currP, fullYears, config) {
     <div class="view360AnalysisNarrative">${narrative}</div>
   </div>`;
 }
-function view360AnalysisModeFor(config) {
-  const mode = view360AnalysisModes[config.id];
-  return ['main', 'sub', 'all'].includes(mode) ? mode : 'main';
+function view360AnalysisModeFor() {
+  return ['main', 'sub', 'all'].includes(view360AnalysisMode) ? view360AnalysisMode : 'main';
 }
 function view360KmoAnalysisHtml(data, prevP, currP, config) {
   const fullYears = getFullYearPeriods(data, 'PRODUCTIE', currP, 3);
-  const analysisMode = view360AnalysisModeFor(config);
+  const analysisMode = view360AnalysisModeFor();
   const rows = view360KmoRows(data, analysisMode, currP, config);
-  const mainActive = analysisMode === 'main';
-  const subActive = analysisMode === 'sub';
-  const allActive = analysisMode === 'all';
-  const mainLabel = msg('viewMainOnly') || (currentLang === 'fr' ? 'Catégories principales' : 'Hoofdcategorieën');
-  const subLabel = msg('viewSubOnly') || (currentLang === 'fr' ? 'Sous-catégories' : 'Subcategorieën');
-  const allLabel = msg('viewAll') || (currentLang === 'fr' ? 'Tout' : 'Hoofd- en subcategorieën');
   const categoriesHtml = rows.map(row => view360KmoCategoryHtml(data, row, prevP, currP, fullYears, config)).join('');
   return `<div class="view360AnalysisBlock">
     ${exportActionsHtml({ label: config.title })}
     <div class="view360AnalysisHead">
       <div class="view360AnalysisTitle"><h3>${esc(config.title)}</h3><p>${esc(config.subtitle)}</p></div>
-      <div class="view360AnalysisToggle" role="group" aria-label="Analyseweergave">
-        <button type="button" class="${mainActive ? 'active' : ''}" data-view360-analysis="main" data-view360-analysis-id="${esc(config.id)}">${esc(mainLabel)}</button>
-        <button type="button" class="${subActive ? 'active' : ''}" data-view360-analysis="sub" data-view360-analysis-id="${esc(config.id)}">${esc(subLabel)}</button>
-        <button type="button" class="${allActive ? 'active' : ''}" data-view360-analysis="all" data-view360-analysis-id="${esc(config.id)}">${esc(allLabel)}</button>
-      </div>
     </div>
     <div class="view360AnalysisCategories">${categoriesHtml}</div>
   </div>`;
