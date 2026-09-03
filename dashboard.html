@@ -2163,7 +2163,8 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const scrollY = window.scrollY;
       const blockId = analysisBtn.dataset.view360AnalysisId || 'kmo';
-      view360AnalysisModes[blockId] = analysisBtn.dataset.view360Analysis === 'all' ? 'all' : 'main';
+      const requestedMode = analysisBtn.dataset.view360Analysis;
+      view360AnalysisModes[blockId] = ['main', 'sub', 'all'].includes(requestedMode) ? requestedMode : 'main';
       render360View();
       requestAnimationFrame(() => window.scrollTo({ top: scrollY, left: 0, behavior: 'auto' }));
       return;
@@ -4652,13 +4653,17 @@ function view360SpCapMetric() {
 }
 function view360KmoRows(data, mode, currP, config) {
   const baseCats = config.cats || [];
-  if (mode !== 'all') return baseCats.map(cat => ({ head: cat, sub: cat, labelHtml: escLabel(cat), isMain: true }));
   const out = [];
   baseCats.forEach(cat => {
     const rows = rowsOfHead(data, 'PRODUCTIE', cat);
     const ordered = orderedSubs(rows, cat);
-    const hasSubs = ordered.some(sub => sub !== cat);
-    ordered.forEach(sub => {
+    const subRows = ordered.filter(sub => sub !== cat);
+    const visibleRows = mode === 'main'
+      ? [cat]
+      : mode === 'sub'
+        ? (subRows.length ? subRows : [cat])
+        : ordered;
+    visibleRows.forEach(sub => {
       const isMain = sub === cat;
       out.push({
         head: cat,
@@ -4837,15 +4842,18 @@ function view360KmoCategoryHtml(data, row, prevP, currP, fullYears, config) {
   </div>`;
 }
 function view360AnalysisModeFor(config) {
-  return view360AnalysisModes[config.id] === 'all' ? 'all' : 'main';
+  const mode = view360AnalysisModes[config.id];
+  return ['main', 'sub', 'all'].includes(mode) ? mode : 'main';
 }
 function view360KmoAnalysisHtml(data, prevP, currP, config) {
   const fullYears = getFullYearPeriods(data, 'PRODUCTIE', currP, 3);
   const analysisMode = view360AnalysisModeFor(config);
   const rows = view360KmoRows(data, analysisMode, currP, config);
   const mainActive = analysisMode === 'main';
-  const subActive = analysisMode === 'all';
+  const subActive = analysisMode === 'sub';
+  const allActive = analysisMode === 'all';
   const mainLabel = msg('viewMainOnly') || (currentLang === 'fr' ? 'Catégories principales' : 'Hoofdcategorieën');
+  const subLabel = msg('viewSubOnly') || (currentLang === 'fr' ? 'Sous-catégories' : 'Subcategorieën');
   const allLabel = msg('viewAll') || (currentLang === 'fr' ? 'Tout' : 'Hoofd- en subcategorieën');
   const categoriesHtml = rows.map(row => view360KmoCategoryHtml(data, row, prevP, currP, fullYears, config)).join('');
   return `<div class="view360AnalysisBlock">
@@ -4854,7 +4862,8 @@ function view360KmoAnalysisHtml(data, prevP, currP, config) {
       <div class="view360AnalysisTitle"><h3>${esc(config.title)}</h3><p>${esc(config.subtitle)}</p></div>
       <div class="view360AnalysisToggle" role="group" aria-label="Analyseweergave">
         <button type="button" class="${mainActive ? 'active' : ''}" data-view360-analysis="main" data-view360-analysis-id="${esc(config.id)}">${esc(mainLabel)}</button>
-        <button type="button" class="${subActive ? 'active' : ''}" data-view360-analysis="all" data-view360-analysis-id="${esc(config.id)}">${esc(allLabel)}</button>
+        <button type="button" class="${subActive ? 'active' : ''}" data-view360-analysis="sub" data-view360-analysis-id="${esc(config.id)}">${esc(subLabel)}</button>
+        <button type="button" class="${allActive ? 'active' : ''}" data-view360-analysis="all" data-view360-analysis-id="${esc(config.id)}">${esc(allLabel)}</button>
       </div>
     </div>
     <div class="view360AnalysisCategories">${categoriesHtml}</div>
