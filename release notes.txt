@@ -85,4 +85,6 @@ als er reeds een PDF is geimporteerd en je wil een nieuwe opladen, dan krijg je 
 bij de tabs waar van toepassing, kan je nu meteen kiezen om de voorgaande 3j ook te tonen in de info (stond voorheen wat verborgen in dropdown hoofd/subcat)
 bij de KPI's kan je nu ook de voorgaande jaren tonen
 tabbalk is aangepast zodat je bij kleinere schermresoluties toch nog alle keuzes ziet
-op samenvatting ook info portefeuille/progressie gezet
+keuzes voor categorieën duidelijker gemaakt en op andere, meer consistente positie naast mogelijkheid voor tonen alle jaren
+keuzeknop alles tonen/beperkte weergave hernoemd naar alles uitklappen/inklappen
+
