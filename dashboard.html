@@ -11,6 +11,7 @@
 :root{--bg:#f4f7fb;--card:#fff;--ink:#003b71;--muted:#5f7288;--line:#d6e4f2;--blue:#003b71;--blue2:#8fb4dc;--blue3:#1f6fb2;--orange:#f58220;--orange2:#ffe0c2;--green:#007e97;--green2:#d9eef4;--red:#d85f2a;--red2:#ffe2d4;--purple:#2b5f93;--purple2:#d6e7f7;--shadow:0 8px 24px rgba(0,59,113,.07);--radius:14px;--stack-gap:11px}
 *{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Inter,Segoe UI,Arial,sans-serif;background:radial-gradient(circle at 7% 0%,rgba(31,111,178,.10),transparent 31%),radial-gradient(circle at 96% 4%,rgba(245,130,32,.10),transparent 28%),linear-gradient(180deg,#f7faff 0%,#f2f6fb 52%,#edf3f9 100%);color:var(--ink);position:relative}.appVersion{position:fixed;top:5px;right:8px;z-index:10020;font-size:10px;font-weight:800;letter-spacing:.04em;color:#5f7288;opacity:.45;pointer-events:none}.wrap{max-width:1380px;margin:auto;padding:28px;position:relative;z-index:1}.hero{display:grid;grid-template-columns:1.35fr .75fr;gap:22px;margin-bottom:22px}.panel,.upload,.card,.kpi{background:var(--card);border:1px solid rgba(217,227,239,.95);border-radius:var(--radius);box-shadow:var(--shadow)}.panel{padding:26px}.upload{padding:24px;text-align:center;display:flex;flex-direction:column;justify-content:center;gap:12px}h1{font-size:35px;line-height:1.05;margin:0 0 10px;letter-spacing:-.04em}.lead{margin:0;color:var(--muted);line-height:1.55}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;background:var(--blue);color:white;font-weight:950;padding:14px 20px;cursor:pointer;box-shadow:0 10px 20px rgba(0,59,113,.16)}input[type=file]{display:none}.hint,.small{font-size:13px;color:var(--muted)}.status{margin-top:16px;border-radius:12px;padding:12px 14px;background:#edf5fc;border:1px solid #bad2ea;color:var(--blue);font-weight:800}.warn{background:#fff4e8;border-color:#ffe0c2;color:#9a4b10}.hidden{display:none!important}
 body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(0,59,113,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,59,113,.026) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.55),transparent 68%)}
+.appVersion{border:0;background:transparent;padding:2px 3px;font-family:inherit;pointer-events:auto;cursor:pointer;border-radius:5px;transition:opacity .15s ease,color .15s ease,background .15s ease}.appVersion:hover,.appVersion:focus-visible{opacity:1;color:var(--blue);background:rgba(255,255,255,.88);outline:none}.releaseNotesModal{position:fixed;inset:0;z-index:10100;display:grid;place-items:center;padding:24px;background:rgba(15,38,63,.42);backdrop-filter:blur(4px)}.releaseNotesDialog{width:min(720px,100%);height:min(76vh,720px);min-height:320px;display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid #cbdff2;border-radius:20px;box-shadow:0 28px 80px rgba(15,23,42,.28)}.releaseNotesHead{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px 18px;border-bottom:1px solid #dce8f3;background:linear-gradient(135deg,#f7fbff,#fff)}.releaseNotesHead h2{margin:0;color:var(--blue);font-size:20px;font-weight:950}.releaseNotesClose{width:34px;height:34px;display:grid;place-items:center;border:1px solid #cbdff2;border-radius:999px;background:#fff;color:var(--blue);font-size:23px;line-height:1;cursor:pointer}.releaseNotesClose:hover{background:#edf5fc}.releaseNotesStatus{padding:14px 18px;color:var(--muted);font-size:13px;font-weight:850}.releaseNotesContent,.releaseNotesFrame{flex:1;min-height:0;overflow:auto;margin:0;padding:18px 22px 24px;color:#24435f;background:#fff;font:600 13px/1.55 Inter,Segoe UI,Arial,sans-serif;white-space:pre-wrap;overflow-wrap:anywhere;scrollbar-gutter:stable}.releaseNotesFrame{width:100%;border:0;padding:0}.releaseNotesContent:focus{outline:2px solid #8fb4dc;outline-offset:-3px}body.releaseNotesOpen{overflow:hidden}@media(max-width:640px){.releaseNotesModal{padding:12px}.releaseNotesDialog{height:min(84vh,720px)}.releaseNotesContent{padding:16px}}
 /* ─── Inklapbare topinformatie na PDF-import ───────────────────────────── */
 .topCompactBar{display:flex;align-items:center;justify-content:space-between;gap:14px;background:linear-gradient(135deg,#ffffff,#f8fbff);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:10px 14px;margin:0 0 var(--stack-gap);color:var(--ink);position:relative;z-index:120}
 .topCompactMain{display:flex;align-items:center;gap:10px;min-width:0;line-height:1.2}
@@ -1513,7 +1514,15 @@ body.topInfoReady .topCompactActions #topInfoToggleBtn{order:9}
 </style>
 </head>
 <body>
-<div class="appVersion" aria-hidden="true">v03.09.26</div>
+<button type="button" class="appVersion" id="appVersionBtn" aria-haspopup="dialog" aria-controls="releaseNotesModal">v03.09.26</button>
+<div class="releaseNotesModal hidden" id="releaseNotesModal" role="dialog" aria-modal="true" aria-labelledby="releaseNotesTitle">
+  <div class="releaseNotesDialog">
+    <div class="releaseNotesHead"><h2 id="releaseNotesTitle">Release notes</h2><button type="button" class="releaseNotesClose" id="releaseNotesCloseBtn" aria-label="Sluiten">×</button></div>
+    <div class="releaseNotesStatus" id="releaseNotesStatus">Release notes laden…</div>
+    <pre class="releaseNotesContent hidden" id="releaseNotesContent" tabindex="0"></pre>
+    <iframe class="releaseNotesFrame hidden" id="releaseNotesFrame" title="Release notes"></iframe>
+  </div>
+</div>
 <div class="wrap">
   <div class="languageSwitch"><label for="languageSelect" id="languageLabel">Taal / Langue</label><select id="languageSelect"><option value="nl">NL</option><option value="fr">FR</option></select></div>
   <div id="topCompactBar" class="topCompactBar hidden">
@@ -1821,10 +1830,76 @@ function jumpToKpiCategory(category) {
     window.scrollTo({ top: y, behavior: motionIsReduced() ? 'auto' : 'smooth' });
   }, 35);
 }
+let releaseNotesLoaded = false;
+let releaseNotesReturnFocus = null;
+function scrollReleaseNotesToLatest() {
+  const content = $('releaseNotesContent');
+  if (!content) return;
+  requestAnimationFrame(() => requestAnimationFrame(() => { content.scrollTop = content.scrollHeight; }));
+}
+async function openReleaseNotesModal() {
+  const modal = $('releaseNotesModal');
+  const content = $('releaseNotesContent');
+  const status = $('releaseNotesStatus');
+  const frame = $('releaseNotesFrame');
+  if (!modal || !content || !status) return;
+  releaseNotesReturnFocus = document.activeElement;
+  modal.classList.remove('hidden');
+  document.body.classList.add('releaseNotesOpen');
+  $('appVersionBtn')?.setAttribute('aria-expanded', 'true');
+  setText('releaseNotesTitle', currentLang === 'fr' ? 'Notes de version' : 'Release notes');
+  $('releaseNotesCloseBtn')?.setAttribute('aria-label', currentLang === 'fr' ? 'Fermer' : 'Sluiten');
+  $('releaseNotesCloseBtn')?.focus();
+  if (releaseNotesLoaded) {
+    scrollReleaseNotesToLatest();
+    return;
+  }
+  content.classList.add('hidden');
+  status.classList.remove('hidden');
+  status.textContent = currentLang === 'fr' ? 'Chargement des notes de version…' : 'Release notes laden…';
+  try {
+    const response = await fetch(new URL('release notes.txt', window.location.href), { cache: 'no-store' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    content.textContent = await response.text();
+    releaseNotesLoaded = true;
+    status.classList.add('hidden');
+    content.classList.remove('hidden');
+    scrollReleaseNotesToLatest();
+  } catch (error) {
+    if (window.location.protocol === 'file:' && frame) {
+      status.classList.add('hidden');
+      frame.classList.remove('hidden');
+      frame.onload = () => {
+        try { frame.contentWindow.scrollTo(0, frame.contentDocument.documentElement.scrollHeight); } catch (_) {}
+      };
+      frame.src = new URL('release notes.txt', window.location.href).href;
+    } else {
+      status.textContent = currentLang === 'fr'
+        ? "Les notes de version n’ont pas pu être chargées."
+        : 'De release notes konden niet worden geladen.';
+    }
+  }
+}
+function closeReleaseNotesModal() {
+  const modal = $('releaseNotesModal');
+  if (!modal || modal.classList.contains('hidden')) return;
+  modal.classList.add('hidden');
+  document.body.classList.remove('releaseNotesOpen');
+  $('appVersionBtn')?.setAttribute('aria-expanded', 'false');
+  if (releaseNotesReturnFocus?.focus) releaseNotesReturnFocus.focus();
+}
 document.addEventListener('DOMContentLoaded', () => {
   ['uploadLogo', 'brokerLogoImg'].forEach(id => {
     const el = $(id);
     if (el) el.addEventListener('error', () => { el.style.display = 'none'; });
+  });
+  $('appVersionBtn')?.addEventListener('click', openReleaseNotesModal);
+  $('releaseNotesCloseBtn')?.addEventListener('click', closeReleaseNotesModal);
+  $('releaseNotesModal')?.addEventListener('click', event => {
+    if (event.target === $('releaseNotesModal')) closeReleaseNotesModal();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeReleaseNotesModal();
   });
 });
 
